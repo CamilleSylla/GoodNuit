@@ -1,0 +1,24 @@
+.banner {
+    img {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 60%;
+        border-bottom-left-radius: 20%;
+        object-fit: cover;
+    }
+    .title {
+        position: absolute;
+        left: 10%;
+        top: 50%;
+        transform: translate3d(0, -50%, 0);
+        width: 25%;
+        p {
+            margin-top: .5rem;
+        }
+       button {
+           margin-top: 5vh;
+       }       
+    }
+}
