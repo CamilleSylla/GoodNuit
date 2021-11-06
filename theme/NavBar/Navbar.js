@@ -1,4 +1,5 @@
 import style from './navbar.module.scss'
+import Link from 'next/link'
 
 export default function Navbar () {
 
@@ -14,9 +15,12 @@ export default function Navbar () {
 
     const MenuSection = () => {
         return (
+            
             <div className={style.menuSection}>
                 <Hamburger/>
+                <Link href="/">
                 <span>GoodNuit</span>
+                </Link>
             </div>
         )
     }

@@ -1,42 +1,22 @@
 import Button from '../../../../theme/Button/Button'
+import limitCaracters from '../../../../tools/limitCaracters'
 import style from './popular.module.scss'
+import Link from'next/link'
 
-export default function Popular () {
+export default function Popular ({products}) {
 
-
-    const data = [
-        {
-            name: 'Lit Complet',
-            price: 349.90,
-            img: "https://images.unsplash.com/photo-1595526051245-4506e0005bd0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
-        },
-        {
-            name: 'Lit Complet',
-            price: 349.90,
-            img: "https://images.unsplash.com/photo-1595526051245-4506e0005bd0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
-        },
-        {
-            name: 'Lit Complet',
-            price: 349.90,
-            img: "https://images.unsplash.com/photo-1595526051245-4506e0005bd0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
-        },
-        {
-            name: 'Lit Complet',
-            price: 349.90,
-            img: "https://images.unsplash.com/photo-1595526051245-4506e0005bd0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
-        },
-    ]
-
-    const Card = ({data, i}) => {
+    const Products = ({data, i}) => {
         return (
+            <Link href={`/produits/${data.permalink}`}>
             <article key={i} className={style.card}>
-                <img className={style.itemImg} src={data.img}/>
+                <img className={style.itemImg} src={data.image.url}/>
                 <div className={style.data}>
-                <h1> {data.name} </h1>
-                <p> {data.price}€ </p>
+                <h1> {limitCaracters(data.name, 18)} </h1>
+                <p> {data.price.formatted_with_symbol} </p>
                 <img src='/assets/img/cart.svg'/>
                 </div>
             </article>
+            </Link>
         )
     }
 
@@ -55,8 +35,8 @@ export default function Popular () {
         <section className={style.wrapper}>
             <Content/>
             <div className={style.cards}>
-                {data.map((el, i) => {
-                    return <Card data={el} i={i}/>
+                {products.map((el, i) => {
+                    return <Products data={el} i={i}/>
                 })}
             </div>
         </section>
