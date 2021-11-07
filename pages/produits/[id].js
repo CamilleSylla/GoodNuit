@@ -1,8 +1,11 @@
 import Head from 'next/head'
+import Advantages from '../../components/Section/productPage/Advantages/Advantages';
+import Desc from '../../components/Section/productPage/Desc/Desc';
 import ProductSection from '../../components/Section/productPage/ProductSection/ProductSection';
 import { commerce } from '../../tools/commerce';
 
 export default function ProductPage ({product}) {
+
     return(
         <>
         <Head>
@@ -12,6 +15,8 @@ export default function ProductPage ({product}) {
       </Head>
       <main>
           <ProductSection product={product}/>
+          <Desc product_desc={product.description}/>
+          <Advantages/>
       </main>
         </>
     )

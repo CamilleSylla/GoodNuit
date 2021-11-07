@@ -1,0 +1,18 @@
+.wrapper {
+    height: auto;
+  .delivery {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    .card {
+      width: 10vw;
+      img {
+        width: 100%;
+        filter: invert(98%) sepia(2%) saturate(6566%) hue-rotate(287deg)
+          brightness(88%) contrast(92%);
+      }
+      text-align: center;
+    }
+  }
+}

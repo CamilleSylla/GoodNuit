@@ -1,0 +1,17 @@
+.wrapper {
+    height: auto;
+    width: 100%;
+    .desc {
+        width: 70%;
+        margin: 0 auto;
+        ul {
+            margin-top: 5vh;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 1vw;
+            row-gap: 2vw;
+            list-style: url('/assets/img/plus.svg');
+        }
+    }
+}

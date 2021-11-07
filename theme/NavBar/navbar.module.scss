@@ -60,12 +60,18 @@
                 left: 50%;
                 transform: translate3d(-50%, -50%, 0);
                 height: 40%;
+
             }
             &:hover {
                 .hover {
                     background: #D9BAC6;
+                    
                    
-                }}
+                }
+                img {
+                    filter: invert(98%) sepia(2%) saturate(6566%) hue-rotate(287deg) brightness(88%) contrast(92%);
+                                    }
+            }
         }
     }
 }

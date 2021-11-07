@@ -44,11 +44,10 @@ const Variant = ({variant, i}) => {
             <h1>{product.name}</h1>
             <p className={style.price}>{product.price.formatted_with_symbol}</p>
             <Seperator/>
-            <Quantity/>
-            <Seperator/>
             {product.variant_groups.map((variant, i) => {
                 return <Variant variant={variant} i={i}/>
             })}
+            <Quantity/>
         </div>
     )
 
