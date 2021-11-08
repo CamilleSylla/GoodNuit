@@ -1,0 +1,17 @@
+.wrapper {
+    height: 40vh;
+    width: 90%;
+    margin: 0 auto;
+    background: rgba(#7386BF, .3);
+    border-radius: 40px 40px 0 0;
+    position: relative;
+    .content {
+        width: 90%;
+        height: 70%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%,-50%,0);
+        border: 1px solid red;
+    }
+}

@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Support from '../../components/Section/Global/Support/Support';
 import Advantages from '../../components/Section/productPage/Advantages/Advantages';
 import Desc from '../../components/Section/productPage/Desc/Desc';
 import ProductSection from '../../components/Section/productPage/ProductSection/ProductSection';
@@ -17,6 +18,7 @@ export default function ProductPage ({product}) {
           <ProductSection product={product}/>
           <Desc product_desc={product.description}/>
           <Advantages/>
+          <Support/>
       </main>
         </>
     )

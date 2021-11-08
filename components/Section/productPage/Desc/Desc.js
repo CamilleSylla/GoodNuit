@@ -1,4 +1,4 @@
-import Title from '../title/Title'
+import Title from '../../Global/title/Title'
 import style from './desc.module.scss'
 
 export default function Desc ({product_desc}) {

@@ -1,0 +1,14 @@
+.wrapper {
+    height: auto;
+    position: relative;
+    .container {
+        display: flex;
+        justify-content: center;
+        .content {
+            display: grid;
+            grid-template-columns: repeat(3, 18vw);
+            gap: 8vh;
+          }
+    }
+  
+}

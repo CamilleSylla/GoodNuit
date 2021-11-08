@@ -1,24 +1,12 @@
-import Button from '../../../../theme/Button/Button'
+
 import limitCaracters from '../../../../tools/limitCaracters'
 import style from './popular.module.scss'
-import Link from'next/link'
+import Button from '../../Global/Button/Button'
+import ProductCard from '../../Global/ProductCard/ProductCard'
 
 export default function Popular ({products}) {
 
-    const Products = ({data, i}) => {
-        return (
-            <Link href={`/produits/${data.permalink}`}>
-            <article key={i} className={style.card}>
-                <img className={style.itemImg} src={data.image.url}/>
-                <div className={style.data}>
-                <h1> {limitCaracters(data.name, 18)} </h1>
-                <p> {data.price.formatted_with_symbol} </p>
-                <img src='/assets/img/cart.svg'/>
-                </div>
-            </article>
-            </Link>
-        )
-    }
+    
 
     const Content = () => {
 
@@ -36,7 +24,7 @@ export default function Popular ({products}) {
             <Content/>
             <div className={style.cards}>
                 {products.map((el, i) => {
-                    return <Products data={el} i={i}/>
+                    return <ProductCard display="inline-block" marginLeftRight="5vh" data={el} i={i}/>
                 })}
             </div>
         </section>

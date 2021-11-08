@@ -4,6 +4,13 @@
     .desc {
         width: 70%;
         margin: 0 auto;
+        h3 {
+            padding: 4vw 0 1vw 0;
+            &:first-of-type {
+                padding: 0 0 1vw 0;
+
+            }
+        }
         ul {
             margin-top: 5vh;
             width: 100%;

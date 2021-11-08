@@ -1,5 +1,5 @@
 import style from './infos.module.scss'
-import Button from '../../../../../theme/Button/Button'
+import Button from '../../../Global/Button/Button'
 import { useState } from 'react';
 
 export default function Infos ({product}) {
@@ -48,6 +48,7 @@ const Variant = ({variant, i}) => {
                 return <Variant variant={variant} i={i}/>
             })}
             <Quantity/>
+            
         </div>
     )
 

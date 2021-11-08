@@ -1,4 +1,5 @@
-import Button from '../../../../theme/Button/Button'
+
+import Button from '../../Global/Button/Button'
 import style from './quality.module.scss'
 
 export default function Quality () {

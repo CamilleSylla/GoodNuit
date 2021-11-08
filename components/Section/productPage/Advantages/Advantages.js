@@ -1,4 +1,4 @@
-import Title from '../title/Title'
+import Title from '../../Global/title/Title'
 import style from './advantages.module.scss'
 
 export default function Advantages () {
