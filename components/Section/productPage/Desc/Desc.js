@@ -2,7 +2,6 @@ import Title from '../../Global/title/Title'
 import style from './desc.module.scss'
 
 export default function Desc ({product_desc}) {
-    console.log(product_desc);
 
     const Desc = () => {
 

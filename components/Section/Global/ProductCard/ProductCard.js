@@ -1,10 +1,17 @@
 import style from "./productcard.module.scss";
 import Link from "next/link";
 import limitCaracters from "../../../../tools/limitCaracters";
+import { addCart } from '../../../../tools/addCart'
+import {useContext} from 'react'
+import {CartContext} from '../../../../contexts/cart'
 
 export default function ProductCard({ width, display, data, i, marginLeftRight }) {
+  
+  const [cart, setCart] = useContext(CartContext)
+
+  
   return (
-    <Link href={`/produits/${data.permalink ? data.permalink : "#"}`}>
+    
       <article
         style={{
           marginLeft: `${marginLeftRight ? marginLeftRight : null}`,
@@ -15,13 +22,19 @@ export default function ProductCard({ width, display, data, i, marginLeftRight }
         key={i}
         className={style.card}
       >
+        <Link href={`/produits/${data.permalink ? data.permalink : "#"}`}>
         <img className={style.itemImg} src={data.image.url} />
+        </Link>
         <div className={style.data}>
+        <Link href={`/produits/${data.permalink ? data.permalink : "#"}`}>
+          <>
           <h1> {limitCaracters(data.name, 18)} </h1>
           <p> {data.price.formatted_with_symbol} </p>
-          <img src="/assets/img/cart.svg" />
+          </>
+        </Link>
+          <img onClick={() => addCart(data, cart,setCart)} src="/assets/img/cart.svg" />
         </div>
       </article>
-    </Link>
+    
   );
 }

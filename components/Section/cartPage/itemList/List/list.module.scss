@@ -1,0 +1,20 @@
+.wrapper {
+    width: 70%;
+    position: absolute;
+    text-align: left;
+    table {
+        table-layout: fixed ;
+  width: 100% ;
+    }
+    .product_row {
+        height: 10vh;
+        td {
+            width: 25%;
+            padding: 2vw 0 2vw 0;
+            img {
+                width: 80%;
+            }
+        }
+        
+    }
+}

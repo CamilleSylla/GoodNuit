@@ -1,11 +1,13 @@
 import style from './infos.module.scss'
 import Button from '../../../Global/Button/Button'
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { CartContext } from '../../../../../contexts/cart'
+import { addCart } from '../../../../../tools/addCart';
 
 export default function Infos ({product}) {
-console.log(product);
 
 const [quantity, setQuantity] = useState(1)
+const [cart, setCart] = useContext(CartContext)
 
 const Seperator = () => {
     return <div className={style.seperator}></div>
@@ -20,7 +22,7 @@ const Quantity = () => {
                 <p>{quantity}</p>
                 <img onClick={() => quantity > 1 ? setQuantity(quantity-1) : null} style={{opacity: `${quantity == 1 ? ".5" : "1"}`}} src='/assets/img/botarrow.svg'/>
             </div>
-            <Button text="Ajouter au panier"/>
+            <Button product={product} text="Ajouter au panier"/>
         </div>
     )
 }
