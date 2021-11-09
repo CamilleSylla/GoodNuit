@@ -24,7 +24,7 @@ export default function Navbar() {
       label: "Catalogue",
     },
     {
-      link: "/about",
+      link: "/a-propos",
       label: "About",
     },
   ];

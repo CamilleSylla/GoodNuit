@@ -11,7 +11,7 @@ export default function Quality () {
                 <span>Litterie française</span>
                 <h1>La meilleur des qualitées</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi euismod maximus tempus. Donec feugiat odio quis commodo ultricies.</p>
-                <Button text='En savoir plus'/>
+                <Button link="/a-propos" text='En savoir plus'/>
             </div>
         )
     }

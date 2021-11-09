@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Support from '../components/Section/Global/Support/Support'
 import Banner from '../components/Section/Home/Banner/Banner'
 import Popular from '../components/Section/Home/Popular/Popular'
 import Quality from '../components/Section/Home/Quality/Qualiity.js'
@@ -18,6 +19,7 @@ export default function Home({products}) {
         <Banner/>
         <Popular products={products}/>
         <Quality/>
+        <Support/>
       </main>
     </div>
   )
