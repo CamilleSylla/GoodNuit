@@ -9,7 +9,7 @@ export default function TextSection ({data, i}) {
                     <span>{data.label}</span>
                     <h1>{data.title}</h1>
                     <p>{data.desc}</p>
-                    <Button text='En savoir plus'/>
+                    {data.button ? <Button text='En savoir plus'/> : null}
                 </div>
         )
     }

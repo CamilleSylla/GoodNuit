@@ -11,7 +11,8 @@ export default function About() {
             title : "Lorem Ipsum",
             desc : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi euismod maximus tempus. Donec feugiat odio quis commodo ultricies.",
             imgPos : "20%",
-            textPos : "60%"
+            textPos : "60%",
+            button : true
         },
         {
             img : "/assets/img/banner.jpg",
@@ -19,7 +20,7 @@ export default function About() {
             title : "Lorem Ipsum",
             desc : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi euismod maximus tempus. Donec feugiat odio quis commodo ultricies.",
             imgPos : "60%",
-            textPos : "20%"
+            textPos : "20%",
         },
     ]
   return (

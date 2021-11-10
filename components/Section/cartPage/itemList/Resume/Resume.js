@@ -28,7 +28,8 @@ export default function Resume () {
             <h4>Sommaire de commande</h4>
             <div className={style.content}>
             <p>{cart.length} produit{cart.length > 1 ? "s" : null}</p>
-            <p>{cart.reduce(reducer)}€</p>
+            {cart.length ? <p>{ cart.length > 1 ? Math.round(cart.reduce(reducer) * 100)/100 : cart[0].price.raw}€</p> : null}
+            {cart.length === 0 ? <p>0.00€</p> : null}
             </div>
 
             </div>

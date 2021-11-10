@@ -22,7 +22,9 @@
         left: 50%;
         transform: translate3d(-50%,0,0);
         h1 {
+            font-family: 'Jost', sans-serif;
             font-size: 1.1rem;
+            word-spacing: initial;
         }
         img {
             height: 40%;

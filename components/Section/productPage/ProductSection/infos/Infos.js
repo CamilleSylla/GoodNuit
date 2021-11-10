@@ -34,7 +34,7 @@ const Variant = ({variant, i}) => {
             <h3>{variant.name}</h3>
             <div className={style.variant_container}>
                 {variant.options.map((variant, el) => {
-                    return <button  key={i} className={style.variant}><p> {variant.name} </p></button>
+                    return <button  key={i}  className={style.variant}><p> {variant.name} </p></button>
                 })}
             </div>
             <Seperator/>
